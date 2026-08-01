@@ -11,15 +11,35 @@ body{
 }
 
 .navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 10%;
-    background:#111827;
+    
 }
 
 .logo{
+    color:#fff;.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:rgba(17,24,39,0.95);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}.hire-btn{
+    background:#2563EB;
     color:#fff;
+    text-decoration:none;
+    padding:12px 24px;
+    border-radius:30px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.hire-btn:hover{
+    background:#1D4ED8;
+}
 }
 
 .nav-links{
