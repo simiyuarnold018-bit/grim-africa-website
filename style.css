@@ -112,3 +112,15 @@ footer{
     text-align:center;
     padding:20px;
 }
+.nice-btn{
+    background:#0ea5e9;
+    color:#fff;
+    padding:10px 20px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.nice-btn:hover{
+    background:#0284c7;
+}
