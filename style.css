@@ -112,7 +112,7 @@ footer{
     text-align:center;
     padding:20px;
 }
-.nice-btn{
+.hire-btn{
     background:#0ea5e9;
     color:#fff;
     padding:10px 20px;
@@ -121,6 +121,6 @@ footer{
     font-weight:bold;
 }
 
-.nice-btn:hover{
+.hire-btn:hover{
     background:#0284c7;
 }
