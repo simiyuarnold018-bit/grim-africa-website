@@ -124,3 +124,27 @@ footer{
 .hire-btn:hover{
     background:#0284c7;
 }
+.stats{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    flex-wrap:wrap;
+    background:#0F172A;
+    color:white;
+    padding:60px 10%;
+    text-align:center;
+}
+
+.stat{
+    margin:20px;
+}
+
+.stat h2{
+    font-size:3rem;
+    color:#06B6D4;
+    margin-bottom:10px;
+}
+
+.stat p{
+    font-size:1.1rem;
+}
