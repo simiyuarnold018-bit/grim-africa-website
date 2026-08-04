@@ -88,21 +88,42 @@ section{
 section h2{
     text-align:center;
     margin-bottom:30px;
-}
 
-.services{
-    display:flex;
-    gap:20px;
-    justify-content:center;
-    flex-wrap:wrap;
-}
 
 
 
 footer{
     background:#111827;
     color:white;
-    text-align:center;
+   .services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h3 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.6;
+} text-align:center;
     padding:20px;
 }.card{
     background:#fff;
