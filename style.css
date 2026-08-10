@@ -612,3 +612,54 @@ html {
         text-align: center;
     }
 }
+/* =========================================
+   PREMIUM NAVIGATION
+   ========================================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(15, 23, 42, 0.96);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Navigation links */
+.nav-links a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Animated underline */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background: #0ea5e9;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #0ea5e9;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Get Started button */
+.hire-btn {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                background 0.3s ease;
+}
+
+.hire-btn:hover {
+    transform: translateY(-2px);
+    background: #0284c7;
+    box-shadow: 0 8px 20px rgba(14, 165, 233, 0.35);
+}
