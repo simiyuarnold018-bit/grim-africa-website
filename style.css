@@ -438,3 +438,54 @@ footer p {
         grid-template-columns: 1fr;
     }
 }
+/* =========================================
+   PREMIUM CARD EFFECTS
+   ========================================= */
+
+.service-card,
+.portfolio-card,
+.testimonial-card,
+.why-card {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+    border: 1px solid rgba(30, 41, 59, 0.08);
+}
+
+/* Hover effect */
+.service-card:hover,
+.portfolio-card:hover,
+.testimonial-card:hover,
+.why-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+    border-color: rgba(14, 165, 233, 0.35);
+}
+
+/* Card headings */
+.service-card h3,
+.portfolio-card h3,
+.why-card h3 {
+    transition: color 0.3s ease;
+}
+
+/* Heading changes color when card is hovered */
+.service-card:hover h3,
+.portfolio-card:hover h3,
+.why-card:hover h3 {
+    color: #0ea5e9;
+}
+
+/* Make cards feel cleaner */
+.service-card,
+.portfolio-card,
+.testimonial-card,
+.why-card {
+    border-radius: 16px;
+    background: #ffffff;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
