@@ -1,8 +1,8 @@
-/* =========================================================
+ /* =========================================================
    GRIM AFRICA
-   Premium Digital Agency Website
+   Premium Digital Marketing Agency
+   COMPLETE CLEAN CSS
    ========================================================= */
-
 
 /* =========================
    RESET
@@ -29,6 +29,7 @@ body {
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -54,7 +55,6 @@ button {
    ========================= */
 
 :root {
-
   --primary: #18aeea;
   --primary-dark: #087bb4;
   --primary-light: #e9f8fe;
@@ -72,14 +72,10 @@ button {
 
   --white: #ffffff;
 
-  --shadow:
-    0 18px 55px rgba(15, 23, 42, 0.09);
-
-  --shadow-small:
-    0 8px 25px rgba(15, 23, 42, 0.06);
+  --shadow: 0 18px 55px rgba(15, 23, 42, 0.09);
+  --shadow-small: 0 8px 25px rgba(15, 23, 42, 0.06);
 
   --radius: 20px;
-
 }
 
 
@@ -89,7 +85,7 @@ button {
 
 ::selection {
   background: var(--primary);
-  color: white;
+  color: #ffffff;
 }
 
 .container {
@@ -109,28 +105,19 @@ button {
 
 .section-label {
   display: inline-block;
-
   margin-bottom: 15px;
-
   color: var(--primary);
-
   font-size: 12px;
   font-weight: 900;
-
   letter-spacing: 2.2px;
-
   text-transform: uppercase;
 }
 
 .section-heading h2 {
   color: var(--dark);
-
   font-size: clamp(38px, 5vw, 58px);
-
   line-height: 1.08;
-
   letter-spacing: -2px;
-
   margin-bottom: 20px;
 }
 
@@ -140,75 +127,84 @@ button {
 
 .section-heading p {
   color: var(--muted);
-
   font-size: 17px;
-
   line-height: 1.75;
 }
 
 
-/* =========================
+/* =========================================================
    HEADER
-   ========================= */
+   ========================================================= */
 
 .header {
   position: fixed;
-
   top: 0;
   left: 0;
-
   width: 100%;
-
   z-index: 1000;
 
-  background: rgba(7, 17, 31, 0.88);
-
+  background: rgba(7, 17, 31, 0.92);
   backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 
   border-bottom: 1px solid transparent;
-
   transition: 0.3s ease;
 }
 
 .header.scrolled {
-  background: rgba(7, 17, 31, 0.97);
-
-  border-bottom-color:
-    rgba(255, 255, 255, 0.08);
-
-  box-shadow:
-    0 10px 35px rgba(0, 0, 0, 0.18);
+  background: rgba(7, 17, 31, 0.98);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
 }
 
 .nav-container {
-  height: 78px;
+  min-height: 78px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
+
+  gap: 30px;
 }
 
+
+/* =========================
+   LOGO
+   ========================= */
+
 .logo {
-  color: white;
+  display: inline-flex;
+  align-items: center;
+
+  color: #ffffff;
 
   font-size: 25px;
-
   font-weight: 900;
-
   letter-spacing: -1.2px;
+
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: auto;
+  max-width: 170px;
+  max-height: 55px;
+  object-fit: contain;
 }
 
 .logo span {
   color: var(--primary);
 }
 
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
 .nav {
   display: flex;
-
   align-items: center;
-
+  justify-content: flex-end;
   gap: 28px;
 }
 
@@ -218,10 +214,9 @@ button {
   color: #dce5f0;
 
   font-size: 13px;
-
   font-weight: 700;
 
-  transition: 0.3s;
+  transition: color 0.3s ease;
 }
 
 .nav-link:hover,
@@ -242,7 +237,7 @@ button {
 
   background: var(--primary);
 
-  transition: 0.3s;
+  transition: width 0.3s ease;
 }
 
 .nav-link:hover::after,
@@ -250,11 +245,14 @@ button {
   width: 100%;
 }
 
+
+/* =========================
+   NAV BUTTON
+   ========================= */
+
 .nav-button {
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
 
   padding: 12px 19px;
@@ -262,38 +260,43 @@ button {
   border-radius: 9px;
 
   background: var(--primary);
-
-  color: white;
+  color: #ffffff;
 
   font-size: 13px;
-
   font-weight: 800;
 
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .nav-button:hover {
   background: #0c94d0;
-
   transform: translateY(-2px);
-}
-
-.menu-button {
-  display: none;
-
-  border: none;
-
-  background: transparent;
-
-  color: white;
-
-  font-size: 28px;
 }
 
 
 /* =========================
-   HERO
+   MOBILE MENU BUTTON
    ========================= */
+
+.menu-button {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+
+  font-size: 24px;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
 
 .hero {
   position: relative;
@@ -301,7 +304,6 @@ button {
   min-height: 850px;
 
   display: flex;
-
   align-items: center;
 
   overflow: hidden;
@@ -319,38 +321,47 @@ button {
       #0c2b42 100%
     );
 
-  color: white;
+  color: #ffffff;
 }
 
 .hero::before {
   content: "";
 
   position: absolute;
-
   inset: 0;
 
   background-image:
     linear-gradient(
-      rgba(255,255,255,0.025) 1px,
+      rgba(255, 255, 255, 0.025) 1px,
       transparent 1px
     ),
     linear-gradient(
       90deg,
-      rgba(255,255,255,0.025) 1px,
+      rgba(255, 255, 255, 0.025) 1px,
       transparent 1px
     );
 
   background-size: 55px 55px;
 
-  mask-image:
-    linear-gradient(
-      to bottom,
-      black,
-      transparent
-    );
+  mask-image: linear-gradient(
+    to bottom,
+    black,
+    transparent
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black,
+    transparent
+  );
 
   pointer-events: none;
 }
+
+
+/* =========================
+   HERO GLOWS
+   ========================= */
 
 .hero-glow {
   position: absolute;
@@ -369,8 +380,7 @@ button {
   right: -220px;
   top: 80px;
 
-  background:
-    rgba(24, 174, 234, 0.12);
+  background: rgba(24, 174, 234, 0.12);
 }
 
 .hero-glow-two {
@@ -380,53 +390,51 @@ button {
   left: -180px;
   bottom: -120px;
 
-  background:
-    rgba(24, 174, 234, 0.09);
+  background: rgba(24, 174, 234, 0.09);
 }
+
+
+/* =========================
+   HERO CONTAINER
+   ========================= */
 
 .hero-container {
   position: relative;
-
   z-index: 2;
 
   padding-top: 100px;
-
   padding-bottom: 100px;
 }
 
 .hero-content {
   max-width: 950px;
-
   margin: 0 auto;
 
   text-align: center;
 }
 
+
+/* =========================
+   HERO BADGE
+   ========================= */
+
 .hero-badge {
   display: inline-flex;
-
   align-items: center;
-
   gap: 9px;
 
   padding: 9px 16px;
-
   margin-bottom: 27px;
 
-  border: 1px solid
-    rgba(24, 174, 234, 0.32);
-
+  border: 1px solid rgba(24, 174, 234, 0.32);
   border-radius: 100px;
 
-  background:
-    rgba(24, 174, 234, 0.07);
+  background: rgba(24, 174, 234, 0.07);
 
   color: #bdefff;
 
   font-size: 12px;
-
   font-weight: 800;
-
   letter-spacing: 0.3px;
 }
 
@@ -434,34 +442,45 @@ button {
   width: 7px;
   height: 7px;
 
+  flex-shrink: 0;
+
   border-radius: 50%;
 
   background: var(--primary);
 
-  box-shadow:
-    0 0 12px
-    rgba(24, 174, 234, 0.8);
+  box-shadow: 0 0 12px rgba(24, 174, 234, 0.8);
 }
+
+
+/* =========================
+   HERO TITLE
+   ========================= */
 
 .hero h1 {
   max-width: 950px;
 
   margin: 0 auto 27px;
 
-  color: white;
+  color: #ffffff;
 
   font-size: clamp(48px, 7vw, 82px);
 
   line-height: 1.01;
 
   letter-spacing: -4px;
+
+  font-weight: 900;
 }
 
 .hero h1 span {
   display: block;
-
   color: var(--primary);
 }
+
+
+/* =========================
+   HERO DESCRIPTION
+   ========================= */
 
 .hero-description {
   max-width: 760px;
@@ -471,15 +490,18 @@ button {
   color: #b8c7d8;
 
   font-size: 18px;
-
   line-height: 1.75;
 }
+
+
+/* =========================
+   HERO BUTTONS
+   ========================= */
 
 .hero-buttons {
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
   flex-wrap: wrap;
@@ -488,15 +510,14 @@ button {
 }
 
 
-/* =========================
+/* =========================================================
    BUTTONS
-   ========================= */
+   ========================================================= */
 
 .btn {
   display: inline-flex;
 
   align-items: center;
-
   justify-content: center;
 
   gap: 10px;
@@ -505,21 +526,18 @@ button {
 
   padding: 14px 24px;
 
+  border: 1px solid transparent;
   border-radius: 10px;
 
   font-size: 13px;
-
   font-weight: 900;
 
-  transition: 0.3s;
-
-  border: 1px solid transparent;
+  transition: 0.3s ease;
 }
 
 .btn-primary {
   background: var(--primary);
-
-  color: white;
+  color: #ffffff;
 
   box-shadow:
     0 12px 35px
@@ -537,31 +555,27 @@ button {
 }
 
 .btn-outline {
-  border-color:
-    rgba(255,255,255,0.22);
+  border-color: rgba(255, 255, 255, 0.22);
 
-  background:
-    rgba(255,255,255,0.04);
+  background: rgba(255, 255, 255, 0.04);
 
-  color: white;
+  color: #ffffff;
 }
 
 .btn-outline:hover {
-  background: white;
-
+  background: #ffffff;
   color: var(--dark);
 
   transform: translateY(-3px);
 }
 
 .btn-white {
-  background: white;
-
+  background: #ffffff;
   color: var(--dark);
 
   box-shadow:
     0 15px 35px
-    rgba(0,0,0,0.12);
+    rgba(0, 0, 0, 0.12);
 }
 
 .btn-white:hover {
@@ -569,31 +583,27 @@ button {
 }
 
 .btn-cta-outline {
-  border-color:
-    rgba(255,255,255,0.35);
+  border-color: rgba(255, 255, 255, 0.35);
 
-  color: white;
+  background: rgba(255, 255, 255, 0.08);
 
-  background:
-    rgba(255,255,255,0.08);
+  color: #ffffff;
 }
 
 .btn-cta-outline:hover {
-  background: white;
-
+  background: #ffffff;
   color: var(--primary-dark);
 }
 
 
-/* =========================
+/* =========================================================
    HERO TRUST
-   ========================= */
+   ========================================================= */
 
 .hero-trust {
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
   flex-wrap: wrap;
@@ -613,13 +623,11 @@ button {
   color: #9eafc2;
 
   font-size: 12px;
-
   font-weight: 600;
 }
 
 .trust-icon {
   display: grid;
-
   place-items: center;
 
   width: 19px;
@@ -627,20 +635,18 @@ button {
 
   border-radius: 50%;
 
-  background:
-    rgba(24,174,234,0.14);
+  background: rgba(24, 174, 234, 0.14);
 
   color: var(--primary);
 
   font-size: 11px;
-
   font-weight: 900;
 }
 
 
-/* =========================
+/* =========================================================
    HERO BOTTOM
-   ========================= */
+   ========================================================= */
 
 .hero-bottom {
   position: absolute;
@@ -662,11 +668,9 @@ button {
 
   padding: 18px;
 
-  border-top:
-    1px solid rgba(255,255,255,0.07);
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
 
-  background:
-    rgba(4,10,18,0.45);
+  background: rgba(4, 10, 18, 0.45);
 
   color: #73869d;
 
@@ -678,21 +682,20 @@ button {
 }
 
 
-/* =========================
+/* =========================================================
    INTRO
-   ========================= */
+   ========================================================= */
 
 .intro-section {
   padding: 95px 0;
 
-  background: white;
+  background: #ffffff;
 }
 
 .intro-grid {
   display: grid;
 
-  grid-template-columns:
-    1.1fr 0.9fr;
+  grid-template-columns: 1.1fr 0.9fr;
 
   gap: 90px;
 
@@ -704,8 +707,7 @@ button {
 
   color: var(--dark);
 
-  font-size:
-    clamp(36px, 5vw, 55px);
+  font-size: clamp(36px, 5vw, 55px);
 
   line-height: 1.08;
 
@@ -727,9 +729,9 @@ button {
 }
 
 
-/* =========================
+/* =========================================================
    SERVICES
-   ========================= */
+   ========================================================= */
 
 .services-section {
   background: var(--light);
@@ -738,8 +740,7 @@ button {
 .services-grid {
   display: grid;
 
-  grid-template-columns:
-    repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
   gap: 22px;
 }
@@ -751,7 +752,7 @@ button {
 
   overflow: hidden;
 
-  background: white;
+  background: #ffffff;
 
   border: 1px solid var(--border);
 
@@ -759,7 +760,7 @@ button {
 
   box-shadow:
     0 5px 20px
-    rgba(15,23,42,0.025);
+    rgba(15, 23, 42, 0.025);
 
   opacity: 0;
 
@@ -781,8 +782,7 @@ button {
 .service-card:hover {
   transform: translateY(-8px);
 
-  border-color:
-    rgba(24,174,234,0.35);
+  border-color: rgba(24, 174, 234, 0.35);
 
   box-shadow: var(--shadow);
 }
@@ -848,19 +848,18 @@ button {
 }
 
 
-/* =========================
+/* =========================================================
    WHY US
-   ========================= */
+   ========================================================= */
 
 .why-section {
-  background: white;
+  background: #ffffff;
 }
 
 .why-grid {
   display: grid;
 
-  grid-template-columns:
-    repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 
   gap: 20px;
 }
@@ -872,7 +871,7 @@ button {
 
   border-radius: var(--radius);
 
-  background: white;
+  background: #ffffff;
 
   opacity: 0;
 
@@ -895,7 +894,7 @@ button {
 .why-card:hover {
   background: var(--dark);
 
-  color: white;
+  color: #ffffff;
 
   transform: translateY(-7px);
 
@@ -932,7 +931,7 @@ button {
 }
 
 .why-card:hover h3 {
-  color: white;
+  color: #ffffff;
 }
 
 .why-card p {
@@ -948,9 +947,9 @@ button {
 }
 
 
-/* =========================
+/* =========================================================
    PROCESS
-   ========================= */
+   ========================================================= */
 
 .process-section {
   background: var(--light);
@@ -959,8 +958,7 @@ button {
 .process-grid {
   display: grid;
 
-  grid-template-columns:
-    repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 
   gap: 20px;
 
@@ -972,7 +970,7 @@ button {
 
   padding: 32px;
 
-  background: white;
+  background: #ffffff;
 
   border: 1px solid var(--border);
 
@@ -1029,19 +1027,18 @@ button {
 }
 
 
-/* =========================
+/* =========================================================
    WORK / PORTFOLIO
-   ========================= */
+   ========================================================= */
 
 .work-section {
-  background: white;
+  background: #ffffff;
 }
 
 .work-grid {
   display: grid;
 
-  grid-template-columns:
-    repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
   gap: 24px;
 }
@@ -1049,7 +1046,7 @@ button {
 .work-card {
   overflow: hidden;
 
-  background: white;
+  background: #ffffff;
 
   border: 1px solid var(--border);
 
@@ -1057,7 +1054,7 @@ button {
 
   box-shadow:
     0 5px 20px
-    rgba(15,23,42,0.025);
+    rgba(15, 23, 42, 0.025);
 
   opacity: 0;
 
@@ -1119,7 +1116,9 @@ button {
 }
 
 
-/* Browser mockup */
+/* =========================================================
+   BROWSER MOCKUP
+   ========================================================= */
 
 .browser-window {
   width: 76%;
@@ -1128,14 +1127,13 @@ button {
 
   overflow: hidden;
 
-  background: white;
+  background: #ffffff;
 
   box-shadow:
     0 25px 55px
-    rgba(0,0,0,0.28);
+    rgba(0, 0, 0, 0.28);
 
-  transform:
-    rotate(-2deg);
+  transform: rotate(-2deg);
 }
 
 .browser-top {
@@ -1187,7 +1185,7 @@ button {
 .mock-title {
   margin-top: 25px;
 
-  color: white;
+  color: #ffffff;
 
   font-size: 23px;
 
@@ -1216,7 +1214,7 @@ button {
 
   background: var(--primary);
 
-  color: white;
+  color: #ffffff;
 
   font-size: 7px;
 
@@ -1224,7 +1222,9 @@ button {
 }
 
 
-/* Branding mockup */
+/* =========================================================
+   BRANDING MOCKUP
+   ========================================================= */
 
 .brand-preview {
   display: flex;
@@ -1235,7 +1235,7 @@ button {
 
   text-align: center;
 
-  color: white;
+  color: #ffffff;
 }
 
 .brand-small {
@@ -1274,27 +1274,26 @@ button {
 }
 
 
-/* Analytics mockup */
+/* =========================================================
+   ANALYTICS MOCKUP
+   ========================================================= */
 
 .analytics-preview {
   width: 75%;
 
   padding: 25px;
 
-  border:
-    1px solid
-    rgba(255,255,255,0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 
   border-radius: 12px;
 
-  background:
-    rgba(4,15,25,0.5);
+  background: rgba(4, 15, 25, 0.5);
 
-  color: white;
+  color: #ffffff;
 
   box-shadow:
     0 25px 50px
-    rgba(0,0,0,0.2);
+    rgba(0, 0, 0, 0.2);
 }
 
 .analytics-preview > span {
@@ -1363,6 +1362,11 @@ button {
   height: 88%;
 }
 
+
+/* =========================================================
+   WORK CONTENT
+   ========================================================= */
+
 .work-content {
   padding: 27px;
 }
@@ -1400,8 +1404,7 @@ button {
 
   padding-top: 13px;
 
-  border-top:
-    1px solid var(--border);
+  border-top: 1px solid var(--border);
 
   color: #98a3b3;
 
@@ -1411,9 +1414,9 @@ button {
 }
 
 
-/* =========================
+/* =========================================================
    ABOUT
-   ========================= */
+   ========================================================= */
 
 .about-section {
   background: var(--light);
@@ -1422,8 +1425,7 @@ button {
 .about-grid {
   display: grid;
 
-  grid-template-columns:
-    1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 
   gap: 85px;
 
@@ -1433,8 +1435,7 @@ button {
 .about-content h2 {
   color: var(--dark);
 
-  font-size:
-    clamp(40px, 5vw, 59px);
+  font-size: clamp(40px, 5vw, 59px);
 
   line-height: 1.05;
 
@@ -1462,7 +1463,9 @@ button {
 }
 
 
-/* About visual */
+/* =========================================================
+   ABOUT VISUAL
+   ========================================================= */
 
 .about-panel {
   position: relative;
@@ -1484,7 +1487,7 @@ button {
   background:
     radial-gradient(
       circle at 80% 20%,
-      rgba(24,174,234,0.2),
+      rgba(24, 174, 234, 0.2),
       transparent 30%
     ),
     linear-gradient(
@@ -1495,7 +1498,7 @@ button {
 
   box-shadow:
     0 25px 70px
-    rgba(7,17,31,0.18);
+    rgba(7, 17, 31, 0.18);
 
   opacity: 0;
 
@@ -1525,9 +1528,7 @@ button {
 
   border-radius: 50%;
 
-  border:
-    1px solid
-    rgba(24,174,234,0.25);
+  border: 1px solid rgba(24, 174, 234, 0.25);
 }
 
 .about-panel-top,
@@ -1570,10 +1571,9 @@ button {
 
   margin: 15px 0;
 
-  color: white;
+  color: #ffffff;
 
-  font-size:
-    clamp(38px, 5vw, 60px);
+  font-size: clamp(38px, 5vw, 60px);
 
   line-height: 0.98;
 
@@ -1593,12 +1593,12 @@ button {
 }
 
 
-/* =========================
+/* =========================================================
    FAQ
-   ========================= */
+   ========================================================= */
 
 .faq-section {
-  background: white;
+  background: #ffffff;
 }
 
 .faq-list {
@@ -1606,13 +1606,11 @@ button {
 
   margin: 0 auto;
 
-  border-top:
-    1px solid var(--border);
+  border-top: 1px solid var(--border);
 }
 
 .faq-item {
-  border-bottom:
-    1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .faq-item summary {
@@ -1670,9 +1668,9 @@ button {
 }
 
 
-/* =========================
+/* =========================================================
    CTA
-   ========================= */
+   ========================================================= */
 
 .cta-section {
   position: relative;
@@ -1684,7 +1682,7 @@ button {
   background:
     radial-gradient(
       circle at 80% 20%,
-      rgba(255,255,255,0.15),
+      rgba(255, 255, 255, 0.15),
       transparent 28%
     ),
     linear-gradient(
@@ -1693,7 +1691,7 @@ button {
       #18aeea
     );
 
-  color: white;
+  color: #ffffff;
 
   text-align: center;
 }
@@ -1709,9 +1707,7 @@ button {
   left: -180px;
   bottom: -180px;
 
-  border:
-    1px solid
-    rgba(255,255,255,0.18);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 
   border-radius: 50%;
 }
@@ -1722,6 +1718,8 @@ button {
   z-index: 2;
 
   max-width: 850px;
+
+  margin: 0 auto;
 }
 
 .cta-content .section-label {
@@ -1731,10 +1729,9 @@ button {
 .cta-content h2 {
   margin-bottom: 20px;
 
-  color: white;
+  color: #ffffff;
 
-  font-size:
-    clamp(40px, 6vw, 66px);
+  font-size: clamp(40px, 6vw, 66px);
 
   line-height: 1.02;
 
@@ -1770,9 +1767,9 @@ button {
 }
 
 
-/* =========================
+/* =========================================================
    CONTACT
-   ========================= */
+   ========================================================= */
 
 .contact-section {
   background: var(--light);
@@ -1781,8 +1778,7 @@ button {
 .contact-grid {
   display: grid;
 
-  grid-template-columns:
-    0.85fr 1.15fr;
+  grid-template-columns: 0.85fr 1.15fr;
 
   gap: 60px;
 
@@ -1842,10 +1838,9 @@ button {
 
   padding: 19px;
 
-  background: white;
+  background: #ffffff;
 
-  border:
-    1px solid var(--border);
+  border: 1px solid var(--border);
 
   border-radius: 15px;
 
@@ -1855,8 +1850,7 @@ button {
 .contact-card:hover {
   transform: translateX(5px);
 
-  border-color:
-    rgba(24,174,234,0.35);
+  border-color: rgba(24, 174, 234, 0.35);
 
   box-shadow: var(--shadow-small);
 }
@@ -1907,8 +1901,7 @@ button {
 
   padding-top: 25px;
 
-  border-top:
-    1px solid var(--border);
+  border-top: 1px solid var(--border);
 }
 
 .contact-service-area span {
@@ -1932,21 +1925,22 @@ button {
 }
 
 
-/* Contact form */
+/* =========================================================
+   CONTACT FORM
+   ========================================================= */
 
 .contact-form-wrapper {
   padding: 38px;
 
-  background: white;
+  background: #ffffff;
 
-  border:
-    1px solid var(--border);
+  border: 1px solid var(--border);
 
   border-radius: 22px;
 
   box-shadow:
     0 15px 50px
-    rgba(15,23,42,0.06);
+    rgba(15, 23, 42, 0.06);
 }
 
 .contact-form {
@@ -1984,8 +1978,7 @@ button {
 .form-row {
   display: grid;
 
-  grid-template-columns:
-    1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 
   gap: 17px;
 }
@@ -2013,8 +2006,7 @@ button {
 
   padding: 13px 14px;
 
-  border:
-    1px solid var(--border);
+  border: 1px solid var(--border);
 
   border-radius: 9px;
 
@@ -2039,11 +2031,11 @@ button {
 .form-group textarea:focus {
   border-color: var(--primary);
 
-  background: white;
+  background: #ffffff;
 
   box-shadow:
     0 0 0 3px
-    rgba(24,174,234,0.1);
+    rgba(24, 174, 234, 0.1);
 }
 
 .form-group textarea {
@@ -2089,23 +2081,22 @@ button {
 }
 
 
-/* =========================
+/* =========================================================
    FOOTER
-   ========================= */
+   ========================================================= */
 
 .footer {
   padding-top: 75px;
 
   background: var(--dark);
 
-  color: white;
+  color: #ffffff;
 }
 
 .footer-grid {
   display: grid;
 
-  grid-template-columns:
-    2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
 
   gap: 50px;
 
@@ -2113,7 +2104,7 @@ button {
 }
 
 .footer-brand .logo {
-  display: inline-block;
+  display: inline-flex;
 
   margin-bottom: 18px;
 }
@@ -2149,7 +2140,7 @@ button {
 .footer-column h3 {
   margin-bottom: 9px;
 
-  color: white;
+  color: #ffffff;
 
   font-size: 14px;
 }
@@ -2168,9 +2159,7 @@ button {
 }
 
 .footer-bottom {
-  border-top:
-    1px solid
-    rgba(255,255,255,0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 
   padding: 22px 0;
 }
@@ -2192,9 +2181,9 @@ button {
 }
 
 
-/* =========================
+/* =========================================================
    WHATSAPP
-   ========================= */
+   ========================================================= */
 
 .whatsapp-button {
   position: fixed;
@@ -2216,7 +2205,7 @@ button {
 
   background: #20c76a;
 
-  color: white;
+  color: #ffffff;
 
   font-size: 12px;
 
@@ -2224,7 +2213,7 @@ button {
 
   box-shadow:
     0 12px 30px
-    rgba(32,199,106,0.28);
+    rgba(32, 199, 106, 0.28);
 
   transition: 0.3s;
 }
@@ -2240,9 +2229,9 @@ button {
 }
 
 
-/* =========================
+/* =========================================================
    BACK TO TOP
-   ========================= */
+   ========================================================= */
 
 .back-to-top {
   position: fixed;
@@ -2265,7 +2254,7 @@ button {
 
   background: var(--dark);
 
-  color: white;
+  color: #ffffff;
 
   font-size: 19px;
 
@@ -2307,14 +2296,12 @@ button {
 
   .services-grid,
   .work-grid {
-    grid-template-columns:
-      repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .why-grid,
   .process-grid {
-    grid-template-columns:
-      repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .about-grid {
@@ -2322,10 +2309,8 @@ button {
   }
 
   .footer-grid {
-    grid-template-columns:
-      2fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
   }
-
 }
 
 
@@ -2343,11 +2328,13 @@ button {
   /* Header */
 
   .nav-container {
-    height: 70px;
+    min-height: 70px;
   }
 
   .menu-button {
-    display: block;
+    display: grid;
+
+    place-items: center;
   }
 
   .nav {
@@ -2368,20 +2355,17 @@ button {
 
     gap: 7px;
 
-    background: rgba(7,17,31,0.99);
+    background: rgba(7, 17, 31, 0.99);
 
-    border-top:
-      1px solid
-      rgba(255,255,255,0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 
-    transform:
-      translateY(-150%);
+    transform: translateY(-150%);
 
     opacity: 0;
 
     pointer-events: none;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
   }
 
   .nav.show {
@@ -2469,7 +2453,7 @@ button {
   }
 
 
-  /* Sections */
+  /* Section headings */
 
   .section-heading {
     margin-bottom: 42px;
@@ -2552,8 +2536,7 @@ button {
   /* Footer */
 
   .footer-grid {
-    grid-template-columns:
-      1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 
     gap: 40px 25px;
   }
@@ -2573,11 +2556,11 @@ button {
 
   .whatsapp-button {
     right: 14px;
+
     bottom: 14px;
 
     padding: 12px 16px;
   }
-
 }
 
 
@@ -2589,6 +2572,12 @@ button {
 
   .container {
     width: 90%;
+  }
+
+  .logo img {
+    max-width: 145px;
+
+    max-height: 48px;
   }
 
   .hero h1 {
@@ -2632,7 +2621,6 @@ button {
   .whatsapp-button {
     font-size: 11px;
   }
-
 }
 
 
@@ -2655,5 +2643,4 @@ button {
 
     transition-duration: 0.01ms !important;
   }
-
-} 
+}
